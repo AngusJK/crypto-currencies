@@ -20,10 +20,18 @@ fetch(`${proxyUrl}${baseUrl}`, {
         var cryptoCoins = ""
       }
 
-      coinsData.forEach((coins) => {
+      coinsData.forEach((coin) => {
         cryptoCoins += "<tr>";
         cryptoCoins += `<td> ${coin.uuid} </td>`;
+        cryptoCoins += `<td> ${coin.btcPrice} </td>`;
+        cryptoCoins += `<td> ${coin.rank} </td>`;
+        cryptoCoins += `<td> ${coin.tier} </td>`;
+        cryptoCoins += `<td> ${coin.name} </td>`;
+        cryptoCoins += `<td> ${coin.price} </td>`;
+        cryptoCoins += `<td> ${coin.symbol} </td>`;
+        cryptoCoins += "</tr>";
       })
+      document.getElementById('data').innerHTML = cryptoCoins;
     })
   }
 }).catch((error) => {
