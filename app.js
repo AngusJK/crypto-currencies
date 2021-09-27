@@ -27,7 +27,7 @@ fetch(`${proxyUrl}${baseUrl}`, {
         cryptoCoins += `<td> ${coin.rank} </td>`;
         cryptoCoins += `<td> ${coin.tier} </td>`;
         cryptoCoins += `<td> ${coin.name} </td>`;
-        cryptoCoins += `<td> ${coin.price} </td>`;
+        cryptoCoins += `<td> $${Math.round(coin.price)} Billion </td>`;
         cryptoCoins += `<td> ${coin.symbol} </td>`;
         cryptoCoins += "</tr>";
       })
